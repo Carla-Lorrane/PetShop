@@ -36,7 +36,7 @@ namespace ProjetoPetShop
 
         private void button7_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Minimized; //minimizar 
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -51,11 +51,24 @@ namespace ProjetoPetShop
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            panelcentral.Controls.Clear();
         }
 
         private void panelcentral_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            FormCadClientes clientes = new FormCadClientes();
+            clientes.TopLevel = false;
+            clientes.Dock = DockStyle.Fill;
+            panelcentral.Controls.Clear();//limpa O PAINEL
+            panelcentral.Controls.Add(clientes);//adiciona o form no painel 
+            clientes.Show();
+
+
 
         }
     }
